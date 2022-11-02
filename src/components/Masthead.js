@@ -5,7 +5,7 @@ function Masthead (){
         <header className="masthead bg-primary text-white text-center">
             <div className="container d-flex align-items-center flex-column">
                 {/* Masthead Avatar Image*/}
-                <img className="masthead-avatar mb-5" src="assets/img/jamesavatar.svg" alt="..." />
+                <img className="masthead-avatar mb-5" src="assets/img/jamesavatar.svg" alt="ConradJohnson Avatar" />
                 {/* Masthead Heading*/}
                 <h1 className="masthead-heading text-uppercase mb-0">ConradJohnson</h1>
                 {/* Icon Divider*/}
@@ -15,7 +15,7 @@ function Masthead (){
                     <div className="divider-custom-line"></div>
                 </div>
                 {/* Masthead Subheading*/}
-                <p className="masthead-subheading font-weight-light mb-0">Web3 Dev - Builder - Father</p>
+                <p className="masthead-subheading font-weight-light mb-0">Web3 Builder - Leader - Father</p>
             </div>
         </header>
     )

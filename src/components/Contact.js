@@ -1,15 +1,16 @@
 import React from "react";
 
-
 const styles = {
     textAreas:{
         height: "10rem"
     }
 }
 
+
 function Contact () {
    
     return (
+
         <>
        
         <section className="page-section" id="contact">
@@ -73,11 +74,13 @@ function Contact () {
                         
                         </form>
                     </div>
+                    
                 </div>
             </div>
         </section>
-       
+        
         </>
+        
     )
 }
 

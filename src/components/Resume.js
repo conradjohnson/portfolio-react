@@ -14,8 +14,8 @@ function Resume (){
                 </div>
         
                 <div className="row">
-                    <div className="col-lg-4 ms-auto"><p className="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
-                    <div className="col-lg-4 me-auto"><p className="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
+                    <div className="col-lg-4 ms-auto"><p className="lead">Forward thinking technology leader with proven track record of identifying opportunities in emerging technology to deliver new products, services and lines of business.  Web3 focused engineer.  </p></div>
+                    <div className="col-lg-4 me-auto my-auto"><p className="lead"><a href="https://www.linkedin.com/in/jamesconradjohnson/" target="_blank"><img src="assets/img/linkedin.svg" /></a></p></div>
                 </div>
         
             </div>

@@ -22,7 +22,7 @@ function Portfolio (){
                             <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img className="img-fluid" src="assets/img/portfolio/jate.png" alt="..." />
+                            <img className="img-fluid" src="assets/img/portfolio/jate.png" alt="J.A.T.E. - Just Another Text Editor progressive web application." />
                         </div>
                     </div>
                     {/* Portfolio Item 2*/}
@@ -31,7 +31,7 @@ function Portfolio (){
                             <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img className="img-fluid" src="assets/img/portfolio/beerbuddies.png" alt="..." />
+                            <img className="img-fluid" src="assets/img/portfolio/beerbuddies.png" alt="Beer Buddies Social Media App" />
                         </div>
                     </div>
                     {/* Portfolio Item 3*/}
@@ -40,7 +40,7 @@ function Portfolio (){
                             <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img className="img-fluid" src="assets/img/portfolio/socialmediaapi.png" alt="..." />
+                            <img className="img-fluid" src="assets/img/portfolio/socialmediaapi.png" alt="NoSql Social Media API Services" />
                         </div>
                     </div>
                     {/* Portfolio Item 4*/}

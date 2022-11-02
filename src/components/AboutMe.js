@@ -16,8 +16,8 @@ function AboutMe() {
                 </div>
         
                 <div className="row">
-                    <div className="col-lg-4 ms-auto"><p className="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
-                    <div className="col-lg-4 me-auto"><p className="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
+                    <div className="col-lg-4 ms-auto"><h3>The Engineer</h3><p className="lead">Full stack web3 developer with 20 years coding and deployment experience in traditional web2 technologies.  Platforms include web, mobile web, IoT, mobile apps and web3 applications. </p></div>
+                    <div className="col-lg-4 me-auto"><h3>The Leader</h3><p className="lead">C-Level experience as Chief Technology Officer, Chief Marketing/Product Officer.  Have led multiple engineering teams in enterprise and start-up environments.  Startup bootstrapping. Program and Product Owner.</p></div>
                 </div>
         
             </div>
