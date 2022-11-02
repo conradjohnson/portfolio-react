@@ -49,7 +49,7 @@ function Portfolio (){
                             <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img className="img-fluid" src="assets/img/portfolio/businessmanager.png" alt="..." />
+                            <img className="img-fluid" src="assets/img/portfolio/businessmanager.png" alt="Employee Manager Command Line Application" />
                         </div>
                     </div>
                     {/* Portfolio Item 5*/}
@@ -58,7 +58,7 @@ function Portfolio (){
                             <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img className="img-fluid" src="assets/img/portfolio/ecommapi.png" alt="..." />
+                            <img className="img-fluid" src="assets/img/portfolio/ecommapi.png" alt="E-Commerce API Services" />
                         </div>
                     </div>
                     {/* Portfolio Item 6*/}
@@ -67,7 +67,7 @@ function Portfolio (){
                             <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img className="img-fluid" src="assets/img/portfolio/notestaker.png" alt="..." />
+                            <img className="img-fluid" src="assets/img/portfolio/notestaker.png" alt="Note Taker Web Application" />
                         </div>
                     </div>
                 </div>
