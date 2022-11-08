@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 
-// Here we import a helper function that will check if the email is valid
+// Here we import a helper function that will check if the email and phone number is valid
 import { validatePhone, validateEmail } from '../utils/helpers';
 
+// some inline styling for dynamic rendering
 const styles = {
     textAreas:{
         height: "10rem"
@@ -10,22 +11,20 @@ const styles = {
     formError:{
         fontWeight:"bold",
         color: "red"
-    },
-    displayBlock:{
-        display:"block"
     }
 }
 
 
 
-
+// Contact Component
 function Contact () {
  
 
-
+    // form values as well as styling booleans for form errors
     const [email, setEmail] = useState('');
-    const [userName, setUserName] = useState('');
-    const [password, setPassword] = useState('');
+    const [name, setName] = useState('');
+    const [message, setMessage] = useState('');
+    const [phone, setPhone] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [styleNameRequired, setStyleNameRequired] = useState(false);
     const [styleEmailRequired, setStyleEmailRequired] = useState(false);
@@ -33,28 +32,53 @@ function Contact () {
     const [stylePhoneRequired, setStylePhoneRequired] = useState(false);
     const [styleMsgRequired, setStyleMsgRequired] = useState(false);
 
-    function handleChange(evt) {
-        console.log("new value", evt.target.value);
-      }
+   
+    // every time one of our fields is changed, lets store that in state.
     const handleInputChange = (e) => {
         // Getting the value and name of the input which triggered the change
         const { target } = e;
         const inputType = target.name;
         const inputValue = target.value;
     
-        // Based on the input type, we set the state of either email, username, and password
-        if (inputType === 'email') {
-            setEmail(inputValue);  
-            
-        } else if (inputType === 'userName') {
-          setUserName(inputValue);
-        } else {
-          setPassword(inputValue);
+        // Based on the input type, we set the state of either email, name, phone and message
+        switch (inputType){ 
+            case 'name': 
+                setName(inputValue);
+                break;
+            case 'email':  
+                setEmail(inputValue);
+                break;
+            case 
+                'phone': setPhone(inputValue);
+                break;
+            case 
+                'message': setMessage(inputValue);
+                break;
+            default: break;
+                    
         }
+        
       };
 
+      // if someone submits the form, then clear the values and reset the form
+      // currently we do nothing with the contact form data, but here is where 
+      // we would route this data to some API or graphql endpoint.
       const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // here we would revalidate and submit the data
+
+        //reset the form
+        //set all fields to blank... we don't handle the submit function right now.
+        setName('');
+        setEmail('');
+        setPhone('');
+        setMessage('');
+
       }
+
+      //handle focus change will fire 'onBlur' to see if the field the user just left meets our
+      // form submission requirements.
       const handleFocusChange = (e) => {
         // Getting the value and name of the input which triggered the change
         const { target } = e;
@@ -117,49 +141,34 @@ function Contact () {
                 <div className="row justify-content-center">
                     <div className="col-lg-8 col-xl-7">
                         
-                        <form id="contactForm" data-sb-form-api-token="3a68f5aa-ad92-45ed-a5ac-7e3f5b6325ff">
+                        <form id="contactForm" onSubmit={handleSubmit} method="post">
                             {/*Name input*/}
                             <div className="form-floating mb-3">
-                                <input className="form-control" id="name" type="text" name="name" onChange={handleInputChange} onBlur={handleFocusChange} placeholder="Enter your name..."  />
+                                <input className="form-control" id="name" type="text" name="name" onChange={handleInputChange} onBlur={handleFocusChange}  value={name} placeholder="Name?"/>
                                 <label htmlFor="name">Full name</label>
                                 {(styleNameRequired) ?<div style={styles.formError}>A name is required.</div>: null}
                             </div>
                             {/*Email address input*/}
                             <div className="form-floating mb-3">
-                                <input className="form-control" id="email" type="email" name="email" onChange={handleInputChange} onBlur={handleFocusChange} placeholder="name@example.com"/>
+                                <input className="form-control" id="email" type="email" name="email" onChange={handleInputChange} onBlur={handleFocusChange} value={email} placeholder="email@domain.com"/>
                                 <label htmlFor="email">Email address</label>
                                 {(styleEmailRequired) ?<div style={styles.formError}>An email is required.</div>: null}
                                 {(styleEmailValid) ?<div style={styles.formError}> Email is not valid.</div>: null}
                             </div>
                             {/*Phone number input*/}
                             <div className="form-floating mb-3">
-                                <input className="form-control" id="phone" type="tel" name="phone" placeholder="(123) 456-7890" onChange={handleInputChange} onBlur={handleFocusChange} />
+                                <input className="form-control" id="phone" type="tel" name="phone" placeholder="(123) 456-7890" onChange={handleInputChange} onBlur={handleFocusChange} value={phone}/>
                                 <label htmlFor="phone">Phone number</label>
                                 {(stylePhoneRequired) ?<div style={styles.formError}>A phone number is required.</div>: null}
                             </div>
                             {/*Message input*/}
                             <div className="form-floating mb-3">
-                                <textarea className="form-control" id="message" name="message" type="text" placeholder="Enter your message here..." style={styles.textAreas} onChange={handleInputChange} onBlur={handleFocusChange}></textarea>
+                                <textarea className="form-control" id="message" name="message" type="text" placeholder="Enter your message here..." style={styles.textAreas} onChange={handleInputChange} onBlur={handleFocusChange} value={message}></textarea>
                                 <label htmlFor="message">Message</label>
                                 {(styleMsgRequired) ? <div style={styles.formError}>A message is required.</div>: null}
                             </div>
-                            {/*Submit success message*/}
                            
-                            {/*This is what your users will see when the form*/}
-                            {/*has successfully submitted*/}
-                            <div className="d-none" id="submitSuccessMessage">
-                                <div className="text-center mb-3">
-                                    <div className="fw-bolder">Form submission successful!</div>
-                                    
-                                </div>
-                            </div>
-                            {/*Submit error message*/}
-                           
-                            {/*This is what your users will see when there is*/}
-                            {/*an error submitting the form*/}
-                            <div className="d-none" id="submitErrorMessage"><div className="text-center text-danger mb-3">Error sending message!</div></div>
-                            {/*Submit Button*/}
-                            <button className="btn btn-primary btn-xl disabled" id="submitButton" onClick={handleSubmit} type="submit">Send</button>
+                            <button className="btn btn-primary btn-xl" id="submitButton"  type="submit">Send</button>
                         
                         </form>
                     </div>
