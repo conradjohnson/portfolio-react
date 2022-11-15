@@ -25,7 +25,7 @@ Portfolio build with React uses a react front end to display work for a develope
 
 Demo:
 
-![Demo Link](https://conradjohnson.github.io/portfolio-react/)
+[Demo Link](https://conradjohnson.github.io/portfolio-react/)
 
 Screen Shot:
 
